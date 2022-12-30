@@ -21,7 +21,7 @@ const About = () => {
     </div>
 }
   return (
-    <div className="md:w-1/3 mx-auto ">
+    <div className=" mx-auto ">
       <div className="shadow-2xl text-center pb-10 mb-10 rounded-3xl">
         <div className="flex justify-end">
           <label htmlFor="my-modal-3" className=" px-2 py-1 text-white rounded-lg  bg-purple-500">

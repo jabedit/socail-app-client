@@ -13,7 +13,7 @@ const Media = () => {
         .then(data => setAllPost(data))
     },[allposts])
     return (
-        <div className=' md:w-1/2 mx-auto'>
+        <div className=' mx-auto'>
             <div class="grid grid-cols-1 gap-4">
                 {
                     allposts.map( post => <MediaCard post={post} />)

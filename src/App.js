@@ -6,7 +6,7 @@ import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
-    <div style={{backgroundClor: "#FEFEFE"}} >
+    <div className='md:px-20 ' style={{backgroundClor: "#FEFEFE"}} >
        <RouterProvider router={router} />
        <Toaster />
     </div>
