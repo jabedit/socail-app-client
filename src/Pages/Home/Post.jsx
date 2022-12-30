@@ -37,7 +37,7 @@ const Post = () => {
                     postTime: new Date().toLocaleString()
                     
                 }
-                fetch(`http://localhost:5000/media`, {
+                fetch(`https://socail-media-server-nu.vercel.app/media`, {
                     method:'POST',
                     headers: {
                         'content-type' : 'application/json'

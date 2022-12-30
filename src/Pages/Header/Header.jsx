@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import {AiFillHome, AiFillMessage} from 'react-icons/ai'
+import {CgProfile} from 'react-icons/cg'
+import {GrMultimedia} from 'react-icons/gr'
 import { useContext } from "react";
 import { AuthContext } from "../../Contexts/AuthProvider";
 import logo from "../../assets/logo.png";
@@ -21,7 +23,7 @@ const Header = ({ setTheme }) => {
   };
   return (
    
-    <nav>
+    <nav className="md:px-20  bg-white">
       <div className="navbar navbar-bg-color text-purple-500 font-semibold mb-7">
         <div className="navbar-start">
           <div className="dropdown">
@@ -45,16 +47,19 @@ const Header = ({ setTheme }) => {
               tabIndex={0}
               className="menu menu-compact dropdown-content mt-3 p-2 shadow categories  rounded-box w-52"
             >
-
               <li>
-                <Link to="/media">Media</Link>
+                <Link to="/"> <AiFillHome />Home</Link>
               </li>
 
               <li>
-                <Link to="/message">Message</Link>
+                <Link to="/media"> <GrMultimedia />Media</Link>
+              </li>
+
+              <li>
+                <Link to="/message"><AiFillMessage />Message</Link>
               </li>
               <li>
-                <Link to="/about">About</Link>
+                <Link to="/about"><CgProfile />About</Link>
               </li>
             </ul>
           </div>
@@ -68,17 +73,21 @@ const Header = ({ setTheme }) => {
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal p-0">
+          <ul className="menu menu-horizontal p-0 text-3xl">
 
-          <li>
-                <Link to="/media">Media</Link>
+          <li className="pl-5">
+                <Link to="/"> <AiFillHome /></Link>
               </li>
 
-              <li>
-                <Link to="/message">Message</Link>
+              <li className="pl-5">
+                <Link to="/media"> <GrMultimedia /></Link>
               </li>
-              <li>
-                <Link to="/about">About</Link>
+
+              <li className="pl-5 text-purple-500 ">
+                <Link to="/message"><AiFillMessage /></Link>
+              </li>
+              <li className="pl-5">
+                <Link to="/about"><CgProfile /></Link>
               </li>
           </ul>
         </div>

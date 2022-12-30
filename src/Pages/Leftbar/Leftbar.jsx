@@ -3,7 +3,7 @@ import Message from './Message';
 
 const Leftbar = () => {
     return (
-        <div>
+        <div className=''>
             <Message />
         </div>
     );

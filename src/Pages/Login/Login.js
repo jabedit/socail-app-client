@@ -94,7 +94,7 @@ const Login = () => {
                   </label>
                 </div>
                 <div className="form-control mt-6">
-                  <button type="submit" className="btn bg-indigo-500 border-0">Login</button>
+                  <button type="submit" className="btn bg-purple-500 border-0">Login</button>
                 </div>
                 <label className="label">
                     <p> Are you new user?<Link className="underline text--600" to='/register'> Please Register </Link></p>
@@ -102,21 +102,14 @@ const Login = () => {
                 <p className="text-orange-600"> {error}</p>
                 
               </form>
-              <div className="flex justify-around">
+              <div className="">
                 <button
                   onClick={handleGoogle}
-                  className="text-4xl text-orange-500  hover:text-indigo-600"
+                  className="text-2xl w-full bg-purple-500 px-2 py-2 rounded-xl font-bold  text-white hover:text-indigo-600"
                 >
-                  {" "}
-                  <FaGoogle />{" "}
+                  <FaGoogle  className="inline"/>  Sign In
                 </button>
-                <button
-                  onClick={handleGithub}
-                  className="text-4xl text-indigo-500 hover:text-orange-600"
-                >
-                  {" "}
-                  <FaGithub />
-                </button>
+                
                 
               </div>
             </div>

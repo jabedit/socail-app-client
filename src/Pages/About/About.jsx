@@ -10,7 +10,7 @@ const About = () => {
   const [userAbout, setUserAbout] = useState({});
   
   useEffect(() => {
-    fetch(`http://localhost:5000/abouts?email=${user?.email}`)
+    fetch(`https://socail-media-server-nu.vercel.app/abouts?email=${user?.email}`)
       .then((res) => res.json())
       .then((data) => setUserAbout(data[0]));
   }, [userAbout]);
@@ -22,7 +22,7 @@ const About = () => {
 }
   return (
     <div className=" mx-auto ">
-      <div className="shadow-2xl text-center pb-10 mb-10 rounded-3xl">
+      <div className="shadow-2xl text-center pb-10 mb-10 rounded-3xl bg-white">
         <div className="flex justify-end">
           <label htmlFor="my-modal-3" className=" px-2 py-1 text-white rounded-lg  bg-purple-500">
             Edit-Profile

@@ -5,7 +5,7 @@ const Top3Post = () => {
     const [allposts, setAllPost] = useState([])
    
     useEffect(()=>{
-        fetch(`http://localhost:5000/topmedia`)
+        fetch(`https://socail-media-server-nu.vercel.app/topmedia`)
         .then(res => res.json())
         .then(data => setAllPost(data))
     },[allposts])

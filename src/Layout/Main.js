@@ -9,7 +9,7 @@ const Main = () => {
     return (
         <div>
             <Header />
-                <div className=' grid grid-cols-4 gap-4'>
+                <div className=' md:px-20 grid grid-cols-4 gap-4'>
                     <div>
                         <Rightbar />
                     </div>

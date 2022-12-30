@@ -8,12 +8,12 @@ const Media = () => {
     const [allposts, setAllPost] = useState([])
    
     useEffect(()=>{
-        fetch(`http://localhost:5000/media`)
+        fetch(`https://socail-media-server-nu.vercel.app/media`)
         .then(res => res.json())
         .then(data => setAllPost(data))
     },[allposts])
     return (
-        <div className=' mx-auto'>
+        <div className=' mx-auto bg-white'>
             <div class="grid grid-cols-1 gap-4">
                 {
                     allposts.map( post => <MediaCard post={post} />)

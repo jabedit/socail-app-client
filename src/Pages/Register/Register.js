@@ -18,25 +18,24 @@ const Register = () => {
     const name = form.name.value
     const email = form.email.value
     const password = form.password.value
-    const photoURL = form.photoURL.value
     
     createUser(email, password )
     .then(result => {
       const user = result.user
       if(user){
         toast.success('User SignUp Successfully')
-        saveUser(user ,  photoURL, name)
+        saveUser(user)
       }
       console.log(user)
         setError('')
         form.reset()
-        handleUserPhotoURLAndName(name, photoURL)
+        handleUserPhotoURLAndName(name)
 
         const userInfo = {
           name : user?.displayName,
           email: user?.email
         }
-        console.log(userInfo)
+        
       })
     .catch(error => {
         const message = error.message
@@ -44,24 +43,23 @@ const Register = () => {
     })
     
   }
-  const handleUserPhotoURLAndName = (name, photoURL) =>{
+  const handleUserPhotoURLAndName = (name) =>{
     const profile = {
         displayName: name,
-        photoURL: photoURL
+       
     }
     updateUserProfile(profile)
     .then( () =>{})
     .catch(error => console.error(error))
   }
-  const saveUser = (userInfo,   photoURL, name) =>{
+  const saveUser = (userInfo) =>{
     const user = {
-       name: name,
+       name: userInfo.displayName,
        email: userInfo.email,
-       user_img : photoURL
        
     }
   
-  fetch('http://localhost:5000/abouts', {
+  fetch('https://socail-media-server-nu.vercel.app/abouts', {
       method: 'POST', 
       headers: {
           'content-type': 'application/json'
@@ -120,20 +118,8 @@ const Register = () => {
                   
                 </div>
                
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text">PhotoURL</span>
-                  </label>
-                  <input
-                    name="photoURL"
-                    type="text"
-                    placeholder="Enter PhotoURL"
-                    className="input input-bordered"
-                  />
-                  
-                </div>
                 <div className="form-control mt-6">
-                  <button type='submit' className="btn bg-indigo-500 border-0">Register</button>
+                  <button type='submit' className="btn bg-purple-500 text-white font-bold border-0">Register</button>
                   
                 </div>
                 <label className="label">

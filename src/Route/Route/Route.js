@@ -26,7 +26,7 @@ const router = createBrowserRouter([
             {
                 path: '/signlepost/:id',
                 element:<PostDetails />,
-                loader: async ({params})=>fetch(`http://localhost:5000/signlepost/${params.id}`)
+                loader: async ({params})=>fetch(`https://socail-media-server-nu.vercel.app/signlepost/${params.id}`)
 
 
             },

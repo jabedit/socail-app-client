@@ -17,14 +17,14 @@ const MediaCard = ({ post }) => {
   const [likes, setLikes] = useState([])
   
   useEffect(()=>{
-    fetch(`http://localhost:5000/comments?comment_id=${post._id}`)
+    fetch(`https://socail-media-server-nu.vercel.app/comments?comment_id=${post._id}`)
     .then(res => res.json())
     .then(data => setComents(data) )
   }, [comments])
 //   const { data: comments = [], refetch, isLoading } = useQuery({
 //     queryKey: ['comments'],
 //     queryFn: async () => {
-//         const res = await fetch(`http://localhost:5000/comments?comment_id=${post._id}`);
+//         const res = await fetch(`https://socail-media-server-nu.vercel.app/comments?comment_id=${post._id}`);
 //         const data = await res.json();
 //         return data;
 //     }
@@ -49,7 +49,7 @@ if(loading) {
 
     }
     if(user){
-      fetch(`http://localhost:5000/comments`, {
+      fetch(`https://socail-media-server-nu.vercel.app/comments`, {
                     method:'POST',
                     headers: {
                         'content-type' : 'application/json'
@@ -78,7 +78,7 @@ if(loading) {
           userLike: like
       }
 
-    fetch(`http://localhost:5000/media/like/${id}`,{
+    fetch(`https://socail-media-server-nu.vercel.app/media/like/${id}`,{
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(userLikes)
@@ -93,7 +93,7 @@ if(loading) {
       
   }
   return (
-    <div className="p-5 rounded-lg shadow-2xl  my-4">
+    <div className="p-5 rounded-lg shadow-2xl  my-4 bg-white">
       <div>
         <div></div>
         <div className="flex py-2">

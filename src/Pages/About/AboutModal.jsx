@@ -21,7 +21,7 @@ const AboutModal = ({userAbout}) => {
       university:university,
       address:address
   }
-  fetch(`http://localhost:5000/abouts/profile/${_id}`, {
+  fetch(`https://socail-media-server-nu.vercel.app/abouts/profile/${_id}`, {
       method:'PUT',
       headers: {
           'content-type' : 'application/json'
@@ -58,7 +58,7 @@ const AboutModal = ({userAbout}) => {
                     
                     
     //             }
-    //             fetch(`http://localhost:5000/abouts/profile/${_id}`, {
+    //             fetch(`https://socail-media-server-nu.vercel.app/abouts/profile/${_id}`, {
     //                 method:'PUT',
     //                 headers: {
     //                     'content-type' : 'application/json'
@@ -84,8 +84,8 @@ const AboutModal = ({userAbout}) => {
   return (
     <div>
       
-      <input type="checkbox" id="my-modal-3" className="modal-toggle" />
-      <div className="modal">
+      <input type="checkbox" id="my-modal-3" className="modal-toggle "  />
+      <div className="modal  ">
         <div className="modal-box relative">
           <label
             htmlFor="my-modal-3"

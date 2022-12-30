@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Message = () => {
     return (
-        <div className=' shadow-2xl rounded-2xl p-5'>
+        <div className=' shadow-2xl rounded-2xl p-5 bg-white'>
             <h2 className=' text-gray-500 font-bold text-2xl'>Message</h2>
             <div><input type="text" /></div>
             
