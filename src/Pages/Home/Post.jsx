@@ -65,14 +65,14 @@ const Post = () => {
         <div className='  bg-white rounded-lg shadow-2xl pt-5 p-5'>
             <form onSubmit={handleSocailPost}>
                 <div>
-                    <textarea style={{border: '.5px solid #2e2e2e'}} name="userText" className="textarea  w-full" placeholder="Write Now....."></textarea>
+                    <textarea style={{border: '.5px solid #2e2e2e'}} name="userText" className="textarea  w-full bg-slate-100" placeholder="Write Now....."></textarea>
                 </div>
                 <div className='flex justify-between'>
                     <div>
                     <input name="userImg" type="file"  className="file-input file-input-bordered file-input-sm w-full max-w-xs  " />
                     </div>
                     <div>
-                        <input type='submit' className='bg-purple-500 px-3 py-1 rounded-md text-black font-semibold' value="Add Post" />
+                        <input type='submit' className='bg-purple-500  text-white px-3 py-1 rounded-md  font-semibold' value="Add Post" />
                     </div>
                 </div>
             </form>

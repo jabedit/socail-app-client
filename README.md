@@ -4,9 +4,9 @@
 This site is an application like social media. Through which like, comment, post, create profile, edit profile can be done.
 ##### client site  Uses Technology
 *  Html , css , javascript 
-*  laibary : ract, tailwind, rect to photo vew, 
+*  laibary : React js, tailwind tailwind,  
 ##### server site  Uses Technology
-* express js, node mongodb, 
+* express js, node,  mongodb, 
 ##### Authentication Technology
 * firebase authentication system
 * user login and singup system added this website

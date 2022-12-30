@@ -91,8 +91,8 @@ if(loading) {
       
   }
   return (
-    <section className="md:w-1/2 mx-auto bg-white">
-        <div className="p-5 rounded-lg shadow-2xl  my-4">
+    <section className="md:w-1/2 mx-auto bg-white rounded-lg shadow-2xl  my-4">
+        <div className="p-5 ">
       <div>
         <div></div>
         <div className="flex py-2">

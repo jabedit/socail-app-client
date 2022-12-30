@@ -8,6 +8,8 @@ import About from "../../Pages/About/About";
 import Home from "../../Pages/Home/Home";
 import PostDetails from "../../Pages/Media/PostDetails";
 import { async } from "@firebase/util";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import MediaCard from "../../Pages/Media/MediaCard";
 const { createBrowserRouter } = require("react-router-dom")
 
 const router = createBrowserRouter([
@@ -25,7 +27,7 @@ const router = createBrowserRouter([
             }, 
             {
                 path: '/signlepost/:id',
-                element:<PostDetails />,
+                element: <PrivateRoute> <PostDetails /> </PrivateRoute>,
                 loader: async ({params})=>fetch(`https://socail-media-server-nu.vercel.app/signlepost/${params.id}`)
 
 

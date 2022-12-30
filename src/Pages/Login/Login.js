@@ -7,6 +7,7 @@ import { AuthContext } from "../../Contexts/AuthProvider";
 import './Login.css'
 import { useState } from "react";
 import { useEffect } from "react";
+import { toast } from "react-hot-toast";
 
 const Login = () => {
     const [error, setError] = useState('')
@@ -24,6 +25,9 @@ const Login = () => {
     .then(result => {
         const  user = result.user
         console.log(user);
+       
+          
+      
         form.reset();
         
         setError('')
@@ -43,19 +47,33 @@ const Login = () => {
     googleLogin()
       .then((result) => {
         const user = result.user;
-        console.log(user);
+        console.log(user)
+        if(user){
+          const userinfo = {
+            name: user.displayName,
+            email: user.email,
+            
+         }
+       
+       fetch('https://socail-media-server-nu.vercel.app/abouts', {
+           method: 'POST', 
+           headers: {
+               'content-type': 'application/json'
+           },
+           body: JSON.stringify(userinfo)
+       })
+       .then(res => res.json())
+       .then(data =>{
+        
+          toast.success('save user information in database')
+       })
+        }
+        
       })
       .then((error) => console.error(error));
   };
   // github login
-  const handleGithub = () => {
-    githubLogin()
-      .then((result) => {
-        const user = result.user;
-        console.log(user);
-      })
-      .then((error) => console.error(error));
-  };
+  
 
   
   return (
